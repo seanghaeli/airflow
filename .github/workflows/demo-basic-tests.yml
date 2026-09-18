@@ -16,196 +16,210 @@
 # under the License.
 #
 ---
-name: "Tests (AMD)"
+name: "Basic tests"
 on:  # yamllint disable-line rule:truthy
-  push:
-    branches:
-      - demo/aip-120-high-fidelity
+  workflow_call:
 permissions: {}
 jobs:
-  build-info:
-    name: "Build info"
+  breeze-unit-tests:
+    name: "Breeze unit tests"
     runs-on: ["ubuntu-latest"]
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
       - name: "Run"
-        run: sleep 28
-  platform-amd:
-    name: "Platform: AMD"
+        run: sleep 66
+  check-translation-completeness:
+    name: "Check translation completeness"
     runs-on: ["ubuntu-latest"]
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
       - name: "Run"
-        run: sleep 4
-  java-sdk-docs:
-    name: "Java SDK docs"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  typescript-sdk-docs:
-    name: "TypeScript SDK docs"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  airflow-ctl-tests:
-    name: "Airflow CTL tests"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  go-sdk-tests:
-    name: "Go SDK tests"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  java-sdk-tests:
-    name: "Java SDK tests"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  mypy-providers-checks:
-    name: "MyPy providers checks"
+        run: sleep 30
+  test-airflow-standalone-commands:
+    name: "Test Airflow standalone commands"
     runs-on: ["ubuntu-latest"]
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
       - name: "Run"
-        run: sleep 652
-  special-tests:
-    name: "Special tests"
+        run: sleep 58
+  test-git-clone-on-windows:
+    name: "Test git clone on Windows"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 24
+  shared-template-rendering-tests:
+    name: "Shared template_rendering tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 18
+  shared-state-tests:
+    name: "Shared state tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 17
+  shared-module-loading-tests:
+    name: "Shared module_loading tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 20
+  shared-configuration-tests:
+    name: "Shared configuration tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 19
+  shared-timezones-tests:
+    name: "Shared timezones tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 19
+  shared-listeners-tests:
+    name: "Shared listeners tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 17
+  shared-plugins-manager-tests:
+    name: "Shared plugins_manager tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 18
+  shared-dagnode-tests:
+    name: "Shared dagnode tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 19
+  shared-secrets-masker-tests:
+    name: "Shared secrets_masker tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 15
+  shared-observability-tests:
+    name: "Shared observability tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 18
+  shared-serialization-tests:
+    name: "Shared serialization tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 19
+  shared-logging-tests:
+    name: "Shared logging tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 19
+  shared-providers-discovery-tests:
+    name: "Shared providers_discovery tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 19
+  shared-secrets-backend-tests:
+    name: "Shared secrets_backend tests"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 21
+  static-checks-basic-checks-only:
+    name: "Static checks: basic checks only"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  migration-round-trip-check:
-    name: "Migration round-trip check"
+  scripts-tests:
+    name: "Scripts tests"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  helm-tests:
-    name: "Helm tests"
+  react-ui-tests:
+    name: "React UI tests"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  task-sdk-tests:
-    name: "Task SDK tests"
+  test-airflow-release-commands:
+    name: "Test Airflow release commands"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  summarize-warnings:
-    name: "Summarize warnings"
+  breeze-integration-tests:
+    name: "Breeze integration tests"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  kustomize-overlays-smoke-tests:
-    name: "Kustomize overlays smoke tests"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  notify-slack:
-    name: "Notify Slack"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  call-basic-tests:
-    name: "Basic tests"
-    uses: ./.github/workflows/demo-basic-tests.yml
-  call-build-ci-images:
-    name: "Build CI images"
-    uses: ./.github/workflows/demo-build-ci-images.yml
-  call-generate-constraints:
-    name: "Generate constraints"
-    uses: ./.github/workflows/demo-generate-constraints.yml
-  call-ci-image-checks:
-    name: "CI image checks"
-    uses: ./.github/workflows/demo-ci-image-checks.yml
-  call-additional-ci-image-checks:
-    name: "Additional CI image checks"
-    uses: ./.github/workflows/demo-additional-ci-image-checks.yml
-  call-non-db-tests-core:
-    name: "Non-DB tests: core"
-    uses: ./.github/workflows/demo-non-db-tests-core.yml
-  call-provider-distributions-tests:
-    name: "Provider distributions tests"
-    uses: ./.github/workflows/demo-provider-distributions-tests.yml
-  call-integration-and-system-tests:
-    name: "Integration and System Tests"
-    uses: ./.github/workflows/demo-integration-and-system-tests.yml
-  call-postgres-tests-core:
-    name: "Postgres tests: core"
-    uses: ./.github/workflows/demo-postgres-tests-core.yml
-  call-low-dep-tests-providers:
-    name: "Low dep tests: providers"
-    uses: ./.github/workflows/demo-low-dep-tests-providers.yml
-  call-sqlite-tests-providers:
-    name: "Sqlite tests: providers"
-    uses: ./.github/workflows/demo-sqlite-tests-providers.yml
-  call-sqlite-tests-core:
-    name: "Sqlite tests: core"
-    uses: ./.github/workflows/demo-sqlite-tests-core.yml
-  call-postgres-tests-providers:
-    name: "Postgres tests: providers"
-    uses: ./.github/workflows/demo-postgres-tests-providers.yml
-  call-mysql-tests-core:
-    name: "MySQL tests: core"
-    uses: ./.github/workflows/demo-mysql-tests-core.yml
-  call-non-db-tests-providers:
-    name: "Non-DB tests: providers"
-    uses: ./.github/workflows/demo-non-db-tests-providers.yml
-  call-low-dep-tests-core:
-    name: "Low dep tests:core"
-    uses: ./.github/workflows/demo-low-dep-tests-core.yml
-  call-mysql-tests-providers:
-    name: "MySQL tests: providers"
-    uses: ./.github/workflows/demo-mysql-tests-providers.yml
-  call-build-prod-images:
-    name: "Build PROD images"
-    uses: ./.github/workflows/demo-build-prod-images.yml
-  call-kubernetes-tests:
-    name: "Kubernetes tests"
-    uses: ./.github/workflows/demo-kubernetes-tests.yml
-  call-additional-prod-image-tests:
-    name: "Additional PROD image tests"
-    uses: ./.github/workflows/demo-additional-prod-image-tests.yml
-  call-finalize-tests:
-    name: "Finalize tests"
-    uses: ./.github/workflows/demo-finalize-tests.yml

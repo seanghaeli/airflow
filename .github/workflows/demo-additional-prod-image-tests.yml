@@ -16,196 +16,172 @@
 # under the License.
 #
 ---
-name: "Tests (AMD)"
+name: "Additional PROD image tests"
 on:  # yamllint disable-line rule:truthy
-  push:
-    branches:
-      - demo/aip-120-high-fidelity
+  workflow_call:
 permissions: {}
 jobs:
-  build-info:
-    name: "Build info"
+  docker-compose-quick-start-with-prod-image-verifying:
+    name: "Docker Compose quick start with PROD image verifying"
     runs-on: ["ubuntu-latest"]
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
       - name: "Run"
-        run: sleep 28
-  platform-amd:
-    name: "Platform: AMD"
+        run: sleep 274
+  test-e2e-integration-tests-with-prod-image-regular-e2e-test:
+    name: "Test e2e integration tests with PROD image / Regular e2e test"
     runs-on: ["ubuntu-latest"]
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
       - name: "Run"
-        run: sleep 4
-  java-sdk-docs:
-    name: "Java SDK docs"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  typescript-sdk-docs:
-    name: "TypeScript SDK docs"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  airflow-ctl-tests:
-    name: "Airflow CTL tests"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  go-sdk-tests:
-    name: "Go SDK tests"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  java-sdk-tests:
-    name: "Java SDK tests"
-    runs-on: ["ubuntu-latest"]
-    if: false
-    timeout-minutes: 90
-    steps:
-      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  mypy-providers-checks:
-    name: "MyPy providers checks"
+        run: sleep 584
+  test-examples-of-prod-image-building:
+    name: "Test examples of PROD image building"
     runs-on: ["ubuntu-latest"]
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
       - name: "Run"
-        run: sleep 652
-  special-tests:
-    name: "Special tests"
+        run: sleep 218
+  xcom-object-storage-backend-tests-with-prod-image-xcom-objec:
+    name: "XCom object storage backend tests with PROD image / XCom object storage backend e2e test"
+    runs-on: ["ubuntu-latest"]
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+      - name: "Run"
+        run: sleep 463
+  prod-image-extra-checks-main:
+    name: "PROD image extra checks (main)"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  migration-round-trip-check:
-    name: "Migration round-trip check"
+  webkit-ui-e2e-tests-with-prod-image:
+    name: "WebKit UI e2e tests with PROD image"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  helm-tests:
-    name: "Helm tests"
+  openlineage-e2e-tests-with-prod-image:
+    name: "OpenLineage e2e tests with PROD image"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  task-sdk-tests:
-    name: "Task SDK tests"
+  chromium-ui-e2e-tests-with-prod-image:
+    name: "Chromium UI e2e tests with PROD image"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  summarize-warnings:
-    name: "Summarize warnings"
+  prod-image-extra-checks-release:
+    name: "PROD image extra checks (release)"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  kustomize-overlays-smoke-tests:
-    name: "Kustomize overlays smoke tests"
+  openlineage-e2e-compat-tests-with-prod-image:
+    name: "OpenLineage e2e compat tests with PROD image"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  notify-slack:
-    name: "Notify Slack"
+  typescript-sdk-e2e-tests-with-prod-image:
+    name: "TypeScript SDK e2e tests with PROD image"
     runs-on: ["ubuntu-latest"]
     if: false
     timeout-minutes: 90
     steps:
       - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
         run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
-  call-basic-tests:
-    name: "Basic tests"
-    uses: ./.github/workflows/demo-basic-tests.yml
-  call-build-ci-images:
-    name: "Build CI images"
-    uses: ./.github/workflows/demo-build-ci-images.yml
-  call-generate-constraints:
-    name: "Generate constraints"
-    uses: ./.github/workflows/demo-generate-constraints.yml
-  call-ci-image-checks:
-    name: "CI image checks"
-    uses: ./.github/workflows/demo-ci-image-checks.yml
-  call-additional-ci-image-checks:
-    name: "Additional CI image checks"
-    uses: ./.github/workflows/demo-additional-ci-image-checks.yml
-  call-non-db-tests-core:
-    name: "Non-DB tests: core"
-    uses: ./.github/workflows/demo-non-db-tests-core.yml
-  call-provider-distributions-tests:
-    name: "Provider distributions tests"
-    uses: ./.github/workflows/demo-provider-distributions-tests.yml
-  call-integration-and-system-tests:
-    name: "Integration and System Tests"
-    uses: ./.github/workflows/demo-integration-and-system-tests.yml
-  call-postgres-tests-core:
-    name: "Postgres tests: core"
-    uses: ./.github/workflows/demo-postgres-tests-core.yml
-  call-low-dep-tests-providers:
-    name: "Low dep tests: providers"
-    uses: ./.github/workflows/demo-low-dep-tests-providers.yml
-  call-sqlite-tests-providers:
-    name: "Sqlite tests: providers"
-    uses: ./.github/workflows/demo-sqlite-tests-providers.yml
-  call-sqlite-tests-core:
-    name: "Sqlite tests: core"
-    uses: ./.github/workflows/demo-sqlite-tests-core.yml
-  call-postgres-tests-providers:
-    name: "Postgres tests: providers"
-    uses: ./.github/workflows/demo-postgres-tests-providers.yml
-  call-mysql-tests-core:
-    name: "MySQL tests: core"
-    uses: ./.github/workflows/demo-mysql-tests-core.yml
-  call-non-db-tests-providers:
-    name: "Non-DB tests: providers"
-    uses: ./.github/workflows/demo-non-db-tests-providers.yml
-  call-low-dep-tests-core:
-    name: "Low dep tests:core"
-    uses: ./.github/workflows/demo-low-dep-tests-core.yml
-  call-mysql-tests-providers:
-    name: "MySQL tests: providers"
-    uses: ./.github/workflows/demo-mysql-tests-providers.yml
-  call-build-prod-images:
-    name: "Build PROD images"
-    uses: ./.github/workflows/demo-build-prod-images.yml
-  call-kubernetes-tests:
-    name: "Kubernetes tests"
-    uses: ./.github/workflows/demo-kubernetes-tests.yml
-  call-additional-prod-image-tests:
-    name: "Additional PROD image tests"
-    uses: ./.github/workflows/demo-additional-prod-image-tests.yml
-  call-finalize-tests:
-    name: "Finalize tests"
-    uses: ./.github/workflows/demo-finalize-tests.yml
+  task-sdk-integration-tests-with-prod-image:
+    name: "Task SDK integration tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+  java-sdk-e2e-tests-with-prod-image:
+    name: "Java SDK e2e tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+  remote-logging-tests-with-prod-image:
+    name: "Remote logging tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+  opensearch-remote-logging-tests-with-prod-image:
+    name: "OpenSearch remote logging tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+  firefox-ui-e2e-tests-with-prod-image:
+    name: "Firefox UI e2e tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+  elasticsearch-remote-logging-tests-with-prod-image:
+    name: "Elasticsearch remote logging tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+  airflow-ctl-integration-tests-with-prod-image:
+    name: "Airflow CTL integration tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+  go-sdk-e2e-tests-with-prod-image:
+    name: "Go SDK e2e tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+  event-driven-tests-with-prod-image:
+    name: "Event driven tests with PROD image"
+    runs-on: ["ubuntu-latest"]
+    if: false
+    timeout-minutes: 90
+    steps:
+      - name: "DEMO - this job ran nothing, see DEMO_NOTICE.md"
+        run: echo "DEMO - this job ran nothing, see DEMO_NOTICE.md"
