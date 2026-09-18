@@ -1,0 +1,40 @@
+# DEMONSTRATION for the AIP-120 dev-list discussion ("Run CI for external
+# contributions in contributor forks").
+#
+# This branch deletes every real workflow and replaces them with jobs that
+# report success without running anything. The fork owner controls
+# .github/workflows, so a green run in a fork is self-attestation, not
+# verification. Any automation that undrafts or prioritizes a PR because the
+# fork's CI is green can be satisfied by a branch like this one.
+name: Tests
+on:
+  push:
+    branches:
+      - demo/aip-120-fork-ci-self-attestation
+permissions: {}
+jobs:
+  static-checks:
+    name: Static checks
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Static checks passed (demo job, nothing was checked)"
+  build-docs:
+    name: Build docs
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Docs built (demo job, nothing was built)"
+  unit-tests-postgres:
+    name: "Unit tests: Postgres 16, Python 3.10"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "8,743 tests passed (demo job, zero tests were run)"
+  unit-tests-mysql:
+    name: "Unit tests: MySQL 8.4, Python 3.11"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "8,743 tests passed (demo job, zero tests were run)"
+  provider-tests:
+    name: Provider tests
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Provider tests passed (demo job, zero tests were run)"
